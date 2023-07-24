@@ -1,0 +1,105 @@
+\documentclass [12pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\setbeamertemplate{caption}[numbered]
+
+\usetheme {Frankfurt}
+\institute[MATCOM]{\large "Facultad de Matemática y Computación"}
+\author[Juan Miguel Maestre Rodriguez]{\textbf{Estudiante:}\textit{ Juan Miguel Maestre Rodriguez \\ C-121}}
+
+
+\date{\today}
+\title{\textbf{Moogle!}}
+
+
+\begin{document}
+
+\begin{frame}
+\maketitle   
+
+\begin{center}
+   \includegraphics[height = 3 cm]{matcom.jpg}
+\end{center}
+
+\thispagestyle{empty}
+
+\end{frame}
+
+\begin{frame}{Clases}
+\textbf{El programa consta de 8 clases} :
+\begin{itemize}
+\item DataBase
+\item Normalize
+\item TF-IDF
+\item Snippet
+\item Score
+\item Moogle
+\item SearchItem
+\item SearchResult
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Clase DataBase}
+Esta es la clase que se utiliza para crear y procesar la base de datos con la cual trabajará el programa.
+La misma contiene solo un método llamado "Loading"
+\end{frame}
+
+\begin{frame}{Clase TF-IDF}
+Esta clase tiene como objetivo medir cuán relevante es una palabra para un
+documento en una colección. La misma contiene dos metodos: 
+\begin{itemize}
+    \item \textbf{TF}
+    \item \textbf{IDF}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Clase TF-IDF}
+    $\textbf{TF} = np / nd$
+
+    \begin{itemize}
+        \item np : cantidad de veces que se repite una palabra en un documento 
+        \item nd : cantidad de palabras que contiene el documento
+    \end{itemize}
+    
+
+
+    $\textbf{IDF} = \log (t/n)$
+    \begin{itemize}
+        \item n : es la cantidad de documentos en los que aparece la palabra
+        \item t : es la cantidad total de documentos
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Clase Normalize}
+Esta clase tiene como objetivo procesar todos los textos del proyecto para que en caso de que exista algún caracter 
+que no sea reconocido por el programa procesarlo de forma adecuada y que no ocurran errores en el funcionamientos del mismo. 
+Esta contiene un solo método llamado "Normalize"
+\end{frame}
+
+\begin{frame}{Clase Snippet}
+Esta clase tiene como objetivo mostrar un fragmento de hasta 100 caracteres de los documentos que mayor coincidencia tengan con la 
+búsqueda realizada por el programa. La misma contiene solamente un método llamado "ShowWords" 
+\end{frame}
+
+\begin{frame}{Clase Score}
+Esta clase tiene como objetivo evaluar el nivel de relevancia que tiene cada documento con la búsqueda realizada por el programa.
+La misma contiene solamente un método llamado "Ranking"
+\end{frame}
+
+\begin{frame}{Clase Moogle}
+Esta es la clase principal del proyecto puesto que en ella es donde mayormente se utilizan los métodos creados en las clases anteriores.
+Cabe mencionar que esta clase junto a SearchItem y a SearchResult existían antes de ser implementado el motor de búsqueda.
+\end{frame}
+
+\begin{frame}
+    
+\begin{center}
+        \huge{FIN!}   
+ \end{center}
+
+\end{frame}
+    
+\end{document}
